@@ -1,0 +1,22 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class UserTasks extends Model
+{
+    use HasFactory;
+    protected $fillable = ['task_id', 'user_id'];
+
+    public function task()
+    {
+        return $this->hasMany(Tasks::class,'id')->with('subTask');
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
+}

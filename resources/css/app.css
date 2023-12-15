@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.child-btn{
+    @apply rounded-md p-1 text-sm scale-75 bg-slate-200 hover:bg-slate-300 focus:ring-offset-0 focus:ring-4 focus:ring-slate-100
+}
+
+.filter-btn{
+    @apply rounded-md p-1 text-sm scale-75 bg-indigo-700 hover:bg-indigo-800 focus:ring-indigo-600 focus:ring-offset-0 focus:ring-4
+}
+
+.upload-btn{
+    @apply rounded-md p-1 text-sm scale-75 bg-green-600 hover:bg-green-500 focus:ring-offset-0 focus:ring-4 focus:ring-green-400 text-white
+}
+
+.add-btn{
+    @apply rounded-md p-1 text-sm scale-75 text-white bg-blue-500 hover:bg-blue-600 focus:ring-offset-0 focus:ring-4 focus:ring-blue-400
+}
+
+.overylay-btn{
+    @apply rounded-md p-1 text-sm scale-100 bg-slate-400 hover:bg-slate-300 focus:ring-slate-200 focus:ring-offset-0 focus:ring-4
+}
+
+.overlay-box{
+    @apply absolute inset-0 opacity-5 hover:opacity-50 hover:bg-gray-800 grid grid-cols-2 gap-4 place-content-between
+    transition ease-in-out delay-150 duration-300
+}
+
+.overlay-box2{
+    @apply absolute inset-0 opacity-5 hover:opacity-50 hover:bg-gray-800 grid grid-cols-3 gap-4 transition ease-in-out delay-150 duration-300 place-items-center
+}
+
+.myScroll{
+    @apply scrollbar-thin scrollbar-thumb-blue-500 scrollbar-track-gray-900 scroll-smooth
+}
+
+.card-box{
+    @apply flex flex-col p-2 text-sm text-gray-700 bg-slate-100 rounded-md scroll-ml-6 snap-end w-64 hover:cursor-pointer hover:bg-slate-200
+}
+
+.filter-box{
+    @apply flex flex-col list-none p-2 gap-4 bg-indigo-600 rounded-md  overflow-hidden transition-all duration-500 w-24
+}
+
+.filter-box-item{
+    @apply cursor-pointer hover:bg-indigo-500 p-1 rounded-md w-full
+}
+
+.slider{
+    @apply absolute inset-0 text-white flex items-center justify-center text-5xl transition-all ease-in-out duration-1000 transform
+}
+.active{
+    @apply translate-x-0 scale-110 z-10
+}
+.before{
+    @apply -translate-x-full
+}
+.after{
+    @apply translate-x-full
+}
